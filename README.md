@@ -8,4 +8,4 @@ Desenvolver uma plataforma moderna para atendimento, vendas, estoque e entregas.
 
 ## Identidade visual
 
-Vermelho, azul e branco.
+Azul-marinho escuro, vermelho e branco, com design moderno no estilo Tech Premium.

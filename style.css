@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --background: #0b1220;
+    --surface: #111c2e;
+      --surface-light: #17243a;
+        --border: #25354d;
+          --primary: #e31b2b;
+            --primary-hover: #ff3445;
+              --blue: #3985f6;
+                --text: #f5f7fb;
+                  --muted: #91a1b8;
+                  }
+
+                  * {
+                    margin: 0;
+                      padding: 0;
+                        box-sizing: border-box;
+                        }
+
+                        body {
+                          font-family: 'Inter', Arial, sans-serif;
+                            background: var(--background);
+                              color: var(--text);
+                                min-height: 100vh;
+                                }
+
+                                .topo {
+                                  position: relative;
+                                    background: linear-gradient(115deg, #101c31, #172b49);
+                                      padding: 30px 26px;
+                                        border-bottom: 1px solid var(--border);
+                                          box-shadow: 0 8px 30px rgba(0,0,0,.22);
+                                            overflow: hidden;
+                                            }
+
+                                            .topo::after {
+                                              content: "";
+                                                position: absolute;
+                                                  width: 220px;
+                                                    height: 220px;
+                                                      right: -70px;
+                                                        top: -130px;
+                                                          border-radius: 50%;
+                                                            background: rgba(227,27,43,.13);
+                                                              filter: blur(25px);
+                                                              }
+
+                                                              .topo h1 {
+                                                                font-size: 28px;
+                                                                  font-weight: 800;
+                                                                    letter-spacing: 2px;
+                                                                      position: relative;
+                                                                        z-index: 1;
+                                                                        }
+
+                                                                        .topo h1 span {
+                                                                          color: #ff4050;
+                                                                          }
+
+                                                                          .topo p {
+                                                                            margin-top: 8px;
+                                                                              color: #aabbd1;
+                                                                                font-size: 13px;
+                                                                                  position: relative;
+                                                                                    z-index: 1;
+                                                                                    }
+
+                                                                                    .conteudo {
+                                                                                      width: 100%;
+                                                                                        max-width: 1250px;
+                                                                                          margin: auto;
+                                                                                            padding: 32px 22px;
+                                                                                            }
+
+                                                                                            .boas-vindas {
+                                                                                              position: relative;
+                                                                                                overflow: hidden;
+                                                                                                  background: linear-gradient(115deg, #172b49, #122038);
+                                                                                                    border: 1px solid #2b4567;
+                                                                                                      border-left: 4px solid var(--primary);
+                                                                                                        padding: 30px 26px;
+                                                                                                          border-radius: 16px;
+                                                                                                            box-shadow: 0 12px 35px rgba(0,0,0,.18);
+                                                                                                            }
+
+                                                                                                            .boas-vindas::after {
+                                                                                                              content: "";
+                                                                                                                position: absolute;
+                                                                                                                  width: 180px;
+                                                                                                                    height: 180px;
+                                                                                                                      right: -50px;
+                                                                                                                        bottom: -110px;
+                                                                                                                          background: rgba(57,133,246,.13);
+                                                                                                                            filter: blur(30px);
+                                                                                                                              border-radius: 50%;
+                                                                                                                              }
+
+                                                                                                                              .boas-vindas h2 {
+                                                                                                                                position: relative;
+                                                                                                                                  z-index: 1;
+                                                                                                                                    font-size: 24px;
+                                                                                                                                      font-weight: 700;
+                                                                                                                                        color: #fff;
+                                                                                                                                          margin-bottom: 10px;
+                                                                                                                                          }
+
+                                                                                                                                          .boas-vindas p {
+                                                                                                                                            position: relative;
+                                                                                                                                              z-index: 1;
+                                                                                                                                                color: #a9bad0;
+                                                                                                                                                  line-height: 1.7;
+                                                                                                                                                    font-size: 14px;
+                                                                                                                                                    }
+
+                                                                                                                                                    .painel {
+                                                                                                                                                      margin-top: 35px;
+                                                                                                                                                      }
+
+                                                                                                                                                      .painel > h2 {
+                                                                                                                                                        color: #f4f7fc;
+                                                                                                                                                          font-size: 19px;
+                                                                                                                                                            font-weight: 700;
+                                                                                                                                                              margin-bottom: 20px;
+                                                                                                                                                              }
+
+                                                                                                                                                              .grade {
+                                                                                                                                                                display: grid;
+                                                                                                                                                                  grid-template-columns: repeat(2, minmax(0, 1fr));
+                                                                                                                                                                    gap: 16px;
+                                                                                                                                                                    }
+
+                                                                                                                                                                    .card {
+                                                                                                                                                                      position: relative;
+                                                                                                                                                                        background: linear-gradient(145deg, #17243a, #111c2e);
+                                                                                                                                                                          border: 1px solid #293b55;
+                                                                                                                                                                            border-radius: 16px;
+                                                                                                                                                                              padding: 25px 19px;
+                                                                                                                                                                                min-height: 155px;
+                                                                                                                                                                                  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+                                                                                                                                                                                    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+                                                                                                                                                                                    }
+
+                                                                                                                                                                                    .card:hover {
+                                                                                                                                                                                      transform: translateY(-5px);
+                                                                                                                                                                                        border-color: #e31b2b;
+                                                                                                                                                                                          box-shadow: 0 12px 30px rgba(0,0,0,.3);
+                                                                                                                                                                                          }
+
+                                                                                                                                                                                          .card span {
+                                                                                                                                                                                            display: inline-flex;
+                                                                                                                                                                                              align-items: center;
+                                                                                                                                                                                                justify-content: center;
+                                                                                                                                                                                                  width: 48px;
+                                                                                                                                                                                                    height: 48px;
+                                                                                                                                                                                                      border-radius: 13px;
+                                                                                                                                                                                                        background: rgba(227,27,43,.13);
+                                                                                                                                                                                                          font-size: 25px;
+                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                          .card h3 {
+                                                                                                                                                                                                            color: #f5f7fb;
+                                                                                                                                                                                                              margin: 16px 0 7px;
+                                                                                                                                                                                                                font-size: 16px;
+                                                                                                                                                                                                                  font-weight: 700;
+                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                  .card p {
+                                                                                                                                                                                                                    color: #91a1b8;
+                                                                                                                                                                                                                      font-size: 13px;
+                                                                                                                                                                                                                        line-height: 1.6;
+                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                        footer {
+                                                                                                                                                                                                                          text-align: center;
+                                                                                                                                                                                                                            padding: 28px 16px;
+                                                                                                                                                                                                                              color: #71839c;
+                                                                                                                                                                                                                                font-size: 12px;
+                                                                                                                                                                                                                                  border-top: 1px solid #202e42;
+                                                                                                                                                                                                                                    margin-top: 25px;
+                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                    @media (min-width: 700px) {
+                                                                                                                                                                                                                                      .grade {
+                                                                                                                                                                                                                                          grid-template-columns: repeat(4, minmax(0, 1fr));
+                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                              .conteudo {
+                                                                                                                                                                                                                                                  padding: 42px 30px;
+                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                      .topo {
+                                                                                                                                                                                                                                                          padding-left: max(30px, calc((100% - 1190px) / 2));
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                            @media (max-width: 380px) {
+                                                                                                                                                                                                                                                              .conteudo {
+                                                                                                                                                                                                                                                                  padding: 22px 12px;
+                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                      .card {
+                                                                                                                                                                                                                                                                          padding: 19px 13px;
+                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                              .boas-vindas h2 {
+                                                                                                                                                                                                                                                                                  font-size: 21px;
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                    ::selection {
+                                                                                                                                                                                                                                                                                      background: #e31b2b;
+                                                                                                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                        button, a {
+                                                                                                                                                                                                                                                                                          -webkit-tap-highlight-color: transparent;
+                                                                                                                                                                                                                                                                                          }
