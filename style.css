@@ -1,15 +1,16 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --background: #0b1220;
-    --surface: #111c2e;
-      --surface-light: #17243a;
-        --border: #25354d;
-          --primary: #e31b2b;
-            --primary-hover: #ff3445;
-              --blue: #3985f6;
-                --text: #f5f7fb;
-                  --muted: #91a1b8;
+  --fundo: #0b1120;
+    --painel: #111c30;
+      --painel-claro: #17243b;
+        --vermelho: #e32636;
+          --azul: #2675d8;
+            --branco: #ffffff;
+              --texto: #e7edf7;
+                --cinza: #8997ad;
+                  --borda: #26344b;
                   }
 
                   * {
@@ -19,200 +20,359 @@
                         }
 
                         body {
-                          font-family: 'Inter', Arial, sans-serif;
-                            background: var(--background);
-                              color: var(--text);
+                          font-family: 'Inter', sans-serif;
+                            background: var(--fundo);
+                              color: var(--texto);
                                 min-height: 100vh;
                                 }
 
-                                .topo {
-                                  position: relative;
-                                    background: linear-gradient(115deg, #101c31, #172b49);
-                                      padding: 30px 26px;
-                                        border-bottom: 1px solid var(--border);
-                                          box-shadow: 0 8px 30px rgba(0,0,0,.22);
-                                            overflow: hidden;
-                                            }
+                                .sidebar {
+                                  width: 255px;
+                                    height: 100vh;
+                                      position: fixed;
+                                        left: 0;
+                                          top: 0;
+                                            background: #0e192b;
+                                              border-right: 1px solid var(--borda);
+                                                padding: 30px 18px;
+                                                  display: flex;
+                                                    flex-direction: column;
+                                                      z-index: 10;
+                                                      }
 
-                                            .topo::after {
-                                              content: "";
-                                                position: absolute;
-                                                  width: 220px;
-                                                    height: 220px;
-                                                      right: -70px;
-                                                        top: -130px;
-                                                          border-radius: 50%;
-                                                            background: rgba(227,27,43,.13);
-                                                              filter: blur(25px);
-                                                              }
+                                                      .logo {
+                                                        padding: 10px 8px 35px;
+                                                          border-bottom: 1px solid var(--borda);
+                                                          }
 
-                                                              .topo h1 {
-                                                                font-size: 28px;
-                                                                  font-weight: 800;
-                                                                    letter-spacing: 2px;
-                                                                      position: relative;
-                                                                        z-index: 1;
-                                                                        }
+                                                          .logo h1 {
+                                                            font-size: 23px;
+                                                              font-weight: 800;
+                                                                letter-spacing: -1px;
+                                                                  color: white;
+                                                                  }
 
-                                                                        .topo h1 span {
-                                                                          color: #ff4050;
-                                                                          }
+                                                                  .logo h1 span {
+                                                                    color: var(--vermelho);
+                                                                    }
 
-                                                                          .topo p {
+                                                                    .logo p {
+                                                                      color: var(--cinza);
+                                                                        font-size: 10px;
+                                                                          letter-spacing: 2px;
                                                                             margin-top: 8px;
-                                                                              color: #aabbd1;
-                                                                                font-size: 13px;
-                                                                                  position: relative;
-                                                                                    z-index: 1;
+                                                                            }
+
+                                                                            .sidebar nav {
+                                                                              display: flex;
+                                                                                flex-direction: column;
+                                                                                  gap: 9px;
+                                                                                    margin-top: 30px;
                                                                                     }
 
-                                                                                    .conteudo {
-                                                                                      width: 100%;
-                                                                                        max-width: 1250px;
-                                                                                          margin: auto;
-                                                                                            padding: 32px 22px;
-                                                                                            }
+                                                                                    .sidebar nav a {
+                                                                                      text-decoration: none;
+                                                                                        color: #aab7ca;
+                                                                                          padding: 14px;
+                                                                                            border-radius: 9px;
+                                                                                              font-size: 13px;
+                                                                                                font-weight: 500;
+                                                                                                  transition: 0.2s;
+                                                                                                  }
 
-                                                                                            .boas-vindas {
-                                                                                              position: relative;
-                                                                                                overflow: hidden;
-                                                                                                  background: linear-gradient(115deg, #172b49, #122038);
-                                                                                                    border: 1px solid #2b4567;
-                                                                                                      border-left: 4px solid var(--primary);
-                                                                                                        padding: 30px 26px;
-                                                                                                          border-radius: 16px;
-                                                                                                            box-shadow: 0 12px 35px rgba(0,0,0,.18);
-                                                                                                            }
+                                                                                                  .sidebar nav a:hover,
+                                                                                                  .sidebar nav a.ativo {
+                                                                                                    background: #1c2c45;
+                                                                                                      color: white;
+                                                                                                        border-left: 3px solid var(--vermelho);
+                                                                                                        }
 
-                                                                                                            .boas-vindas::after {
-                                                                                                              content: "";
-                                                                                                                position: absolute;
-                                                                                                                  width: 180px;
-                                                                                                                    height: 180px;
-                                                                                                                      right: -50px;
-                                                                                                                        bottom: -110px;
-                                                                                                                          background: rgba(57,133,246,.13);
-                                                                                                                            filter: blur(30px);
-                                                                                                                              border-radius: 50%;
-                                                                                                                              }
+                                                                                                        .sidebar-footer {
+                                                                                                          margin-top: auto;
+                                                                                                            padding: 15px 8px;
+                                                                                                              color: #64748b;
+                                                                                                                font-size: 10px;
+                                                                                                                }
 
-                                                                                                                              .boas-vindas h2 {
-                                                                                                                                position: relative;
-                                                                                                                                  z-index: 1;
-                                                                                                                                    font-size: 24px;
-                                                                                                                                      font-weight: 700;
-                                                                                                                                        color: #fff;
-                                                                                                                                          margin-bottom: 10px;
-                                                                                                                                          }
+                                                                                                                .principal {
+                                                                                                                  margin-left: 255px;
+                                                                                                                    padding: 30px;
+                                                                                                                      max-width: 1600px;
+                                                                                                                      }
 
-                                                                                                                                          .boas-vindas p {
-                                                                                                                                            position: relative;
-                                                                                                                                              z-index: 1;
-                                                                                                                                                color: #a9bad0;
-                                                                                                                                                  line-height: 1.7;
-                                                                                                                                                    font-size: 14px;
-                                                                                                                                                    }
+                                                                                                                      .topbar {
+                                                                                                                        display: flex;
+                                                                                                                          justify-content: space-between;
+                                                                                                                            align-items: center;
+                                                                                                                              gap: 15px;
+                                                                                                                                margin-bottom: 30px;
+                                                                                                                                }
 
-                                                                                                                                                    .painel {
-                                                                                                                                                      margin-top: 35px;
+                                                                                                                                .topbar h2 {
+                                                                                                                                  font-size: 22px;
+                                                                                                                                  }
+
+                                                                                                                                  .topbar p {
+                                                                                                                                    color: var(--cinza);
+                                                                                                                                      font-size: 12px;
+                                                                                                                                        margin-top: 6px;
+                                                                                                                                        }
+
+                                                                                                                                        .usuario {
+                                                                                                                                          background: var(--painel);
+                                                                                                                                            border: 1px solid var(--borda);
+                                                                                                                                              padding: 12px 17px;
+                                                                                                                                                border-radius: 10px;
+                                                                                                                                                  font-size: 12px;
+                                                                                                                                                  }
+
+                                                                                                                                                  .usuario span {
+                                                                                                                                                    color: #36c98f;
+                                                                                                                                                      margin-right: 7px;
                                                                                                                                                       }
 
-                                                                                                                                                      .painel > h2 {
-                                                                                                                                                        color: #f4f7fc;
-                                                                                                                                                          font-size: 19px;
-                                                                                                                                                            font-weight: 700;
-                                                                                                                                                              margin-bottom: 20px;
-                                                                                                                                                              }
+                                                                                                                                                      .boas-vindas {
+                                                                                                                                                        background: linear-gradient(110deg, #172c49, #172039 65%, #341c30);
+                                                                                                                                                          border: 1px solid #34415a;
+                                                                                                                                                            border-radius: 16px;
+                                                                                                                                                              padding: 30px;
+                                                                                                                                                                display: flex;
+                                                                                                                                                                  justify-content: space-between;
+                                                                                                                                                                    align-items: center;
+                                                                                                                                                                      gap: 15px;
+                                                                                                                                                                        margin-bottom: 25px;
+                                                                                                                                                                        }
 
-                                                                                                                                                              .grade {
-                                                                                                                                                                display: grid;
-                                                                                                                                                                  grid-template-columns: repeat(2, minmax(0, 1fr));
-                                                                                                                                                                    gap: 16px;
-                                                                                                                                                                    }
+                                                                                                                                                                        .boas-vindas p {
+                                                                                                                                                                          color: #f06a76;
+                                                                                                                                                                            font-size: 10px;
+                                                                                                                                                                              font-weight: 700;
+                                                                                                                                                                                letter-spacing: 2px;
+                                                                                                                                                                                  margin-bottom: 12px;
+                                                                                                                                                                                  }
 
-                                                                                                                                                                    .card {
-                                                                                                                                                                      position: relative;
-                                                                                                                                                                        background: linear-gradient(145deg, #17243a, #111c2e);
-                                                                                                                                                                          border: 1px solid #293b55;
-                                                                                                                                                                            border-radius: 16px;
-                                                                                                                                                                              padding: 25px 19px;
-                                                                                                                                                                                min-height: 155px;
-                                                                                                                                                                                  box-shadow: 0 8px 24px rgba(0,0,0,.15);
-                                                                                                                                                                                    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-                                                                                                                                                                                    }
+                                                                                                                                                                                  .boas-vindas h2 {
+                                                                                                                                                                                    font-size: 27px;
+                                                                                                                                                                                      margin-bottom: 9px;
+                                                                                                                                                                                      }
 
-                                                                                                                                                                                    .card:hover {
-                                                                                                                                                                                      transform: translateY(-5px);
-                                                                                                                                                                                        border-color: #e31b2b;
-                                                                                                                                                                                          box-shadow: 0 12px 30px rgba(0,0,0,.3);
+                                                                                                                                                                                      .boas-vindas span {
+                                                                                                                                                                                        color: #aebbd0;
+                                                                                                                                                                                          font-size: 13px;
                                                                                                                                                                                           }
 
-                                                                                                                                                                                          .card span {
-                                                                                                                                                                                            display: inline-flex;
-                                                                                                                                                                                              align-items: center;
-                                                                                                                                                                                                justify-content: center;
-                                                                                                                                                                                                  width: 48px;
-                                                                                                                                                                                                    height: 48px;
-                                                                                                                                                                                                      border-radius: 13px;
-                                                                                                                                                                                                        background: rgba(227,27,43,.13);
-                                                                                                                                                                                                          font-size: 25px;
-                                                                                                                                                                                                          }
+                                                                                                                                                                                          .data-atual {
+                                                                                                                                                                                            color: #d5deeb;
+                                                                                                                                                                                              font-size: 12px;
+                                                                                                                                                                                                text-align: right;
+                                                                                                                                                                                                }
 
-                                                                                                                                                                                                          .card h3 {
-                                                                                                                                                                                                            color: #f5f7fb;
-                                                                                                                                                                                                              margin: 16px 0 7px;
-                                                                                                                                                                                                                font-size: 16px;
-                                                                                                                                                                                                                  font-weight: 700;
+                                                                                                                                                                                                .indicadores {
+                                                                                                                                                                                                  display: grid;
+                                                                                                                                                                                                    grid-template-columns: repeat(4, 1fr);
+                                                                                                                                                                                                      gap: 17px;
+                                                                                                                                                                                                        margin-bottom: 35px;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .indicador {
+                                                                                                                                                                                                          background: var(--painel);
+                                                                                                                                                                                                            border: 1px solid var(--borda);
+                                                                                                                                                                                                              border-radius: 13px;
+                                                                                                                                                                                                                padding: 23px 18px;
+                                                                                                                                                                                                                  transition: 0.2s;
                                                                                                                                                                                                                   }
 
-                                                                                                                                                                                                                  .card p {
-                                                                                                                                                                                                                    color: #91a1b8;
-                                                                                                                                                                                                                      font-size: 13px;
-                                                                                                                                                                                                                        line-height: 1.6;
-                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                  .indicador:hover,
+                                                                                                                                                                                                                  .modulo:hover {
+                                                                                                                                                                                                                    transform: translateY(-3px);
+                                                                                                                                                                                                                      border-color: #48658c;
+                                                                                                                                                                                                                      }
 
-                                                                                                                                                                                                                        footer {
-                                                                                                                                                                                                                          text-align: center;
-                                                                                                                                                                                                                            padding: 28px 16px;
-                                                                                                                                                                                                                              color: #71839c;
-                                                                                                                                                                                                                                font-size: 12px;
-                                                                                                                                                                                                                                  border-top: 1px solid #202e42;
-                                                                                                                                                                                                                                    margin-top: 25px;
+                                                                                                                                                                                                                      .indicador p {
+                                                                                                                                                                                                                        color: var(--cinza);
+                                                                                                                                                                                                                          font-size: 12px;
+                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                          .indicador h3 {
+                                                                                                                                                                                                                            font-size: 27px;
+                                                                                                                                                                                                                              margin: 15px 0 9px;
+                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                              .indicador span {
+                                                                                                                                                                                                                                font-size: 10px;
+                                                                                                                                                                                                                                  color: #687d9a;
+                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                  .secao-titulo {
+                                                                                                                                                                                                                                    margin-bottom: 18px;
                                                                                                                                                                                                                                     }
 
-                                                                                                                                                                                                                                    @media (min-width: 700px) {
-                                                                                                                                                                                                                                      .grade {
-                                                                                                                                                                                                                                          grid-template-columns: repeat(4, minmax(0, 1fr));
+                                                                                                                                                                                                                                    .secao-titulo h2,
+                                                                                                                                                                                                                                    .atividade h2 {
+                                                                                                                                                                                                                                      font-size: 18px;
+                                                                                                                                                                                                                                        margin-bottom: 7px;
+                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                        .secao-titulo p {
+                                                                                                                                                                                                                                          color: var(--cinza);
+                                                                                                                                                                                                                                            font-size: 12px;
                                                                                                                                                                                                                                             }
 
-                                                                                                                                                                                                                                              .conteudo {
-                                                                                                                                                                                                                                                  padding: 42px 30px;
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                            .grade-modulos {
+                                                                                                                                                                                                                                              display: grid;
+                                                                                                                                                                                                                                                grid-template-columns: repeat(4, 1fr);
+                                                                                                                                                                                                                                                  gap: 17px;
+                                                                                                                                                                                                                                                  }
 
-                                                                                                                                                                                                                                                      .topo {
-                                                                                                                                                                                                                                                          padding-left: max(30px, calc((100% - 1190px) / 2));
+                                                                                                                                                                                                                                                  .modulo {
+                                                                                                                                                                                                                                                    background: var(--painel);
+                                                                                                                                                                                                                                                      border: 1px solid var(--borda);
+                                                                                                                                                                                                                                                        border-radius: 13px;
+                                                                                                                                                                                                                                                          padding: 22px 18px;
+                                                                                                                                                                                                                                                            transition: 0.2s;
                                                                                                                                                                                                                                                             }
-                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                            @media (max-width: 380px) {
-                                                                                                                                                                                                                                                              .conteudo {
-                                                                                                                                                                                                                                                                  padding: 22px 12px;
-                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                            .modulo span {
+                                                                                                                                                                                                                                                              font-size: 25px;
+                                                                                                                                                                                                                                                              }
 
-                                                                                                                                                                                                                                                                      .card {
-                                                                                                                                                                                                                                                                          padding: 19px 13px;
-                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                              .modulo h3 {
+                                                                                                                                                                                                                                                                font-size: 14px;
+                                                                                                                                                                                                                                                                  margin: 16px 0 7px;
+                                                                                                                                                                                                                                                                  }
 
-                                                                                                                                                                                                                                                                              .boas-vindas h2 {
-                                                                                                                                                                                                                                                                                  font-size: 21px;
-                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                  .modulo p {
+                                                                                                                                                                                                                                                                    color: var(--cinza);
+                                                                                                                                                                                                                                                                      font-size: 11px;
+                                                                                                                                                                                                                                                                      }
 
-                                                                                                                                                                                                                                                                                    ::selection {
-                                                                                                                                                                                                                                                                                      background: #e31b2b;
-                                                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                      .atividade {
+                                                                                                                                                                                                                                                                        margin-top: 35px;
+                                                                                                                                                                                                                                                                          background: var(--painel);
+                                                                                                                                                                                                                                                                            border: 1px solid var(--borda);
+                                                                                                                                                                                                                                                                              border-radius: 13px;
+                                                                                                                                                                                                                                                                                padding: 23px;
+                                                                                                                                                                                                                                                                                }
 
-                                                                                                                                                                                                                                                                                        button, a {
-                                                                                                                                                                                                                                                                                          -webkit-tap-highlight-color: transparent;
-                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                .tabela-vazia {
+                                                                                                                                                                                                                                                                                  min-height: 130px;
+                                                                                                                                                                                                                                                                                    display: flex;
+                                                                                                                                                                                                                                                                                      flex-direction: column;
+                                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                                          align-items: center;
+                                                                                                                                                                                                                                                                                            gap: 9px;
+                                                                                                                                                                                                                                                                                              color: var(--cinza);
+                                                                                                                                                                                                                                                                                                text-align: center;
+                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                .tabela-vazia span {
+                                                                                                                                                                                                                                                                                                  font-size: 27px;
+                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                  .tabela-vazia p {
+                                                                                                                                                                                                                                                                                                    font-size: 13px;
+                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                    .tabela-vazia small {
+                                                                                                                                                                                                                                                                                                      font-size: 11px;
+                                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                                      footer {
+                                                                                                                                                                                                                                                                                                        text-align: center;
+                                                                                                                                                                                                                                                                                                          color: #63738b;
+                                                                                                                                                                                                                                                                                                            font-size: 10px;
+                                                                                                                                                                                                                                                                                                              padding: 35px 10px 15px;
+                                                                                                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                                                                                                              @media (max-width: 1050px) {
+                                                                                                                                                                                                                                                                                                                .indicadores,
+                                                                                                                                                                                                                                                                                                                  .grade-modulos {
+                                                                                                                                                                                                                                                                                                                      grid-template-columns: repeat(2, 1fr);
+                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                        @media (max-width: 650px) {
+                                                                                                                                                                                                                                                                                                                          .sidebar {
+                                                                                                                                                                                                                                                                                                                              position: relative;
+                                                                                                                                                                                                                                                                                                                                  width: 100%;
+                                                                                                                                                                                                                                                                                                                                      height: auto;
+                                                                                                                                                                                                                                                                                                                                          padding: 17px;
+                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                              .logo {
+                                                                                                                                                                                                                                                                                                                                                  padding-bottom: 15px;
+                                                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                                                      .sidebar nav {
+                                                                                                                                                                                                                                                                                                                                                          flex-direction: row;
+                                                                                                                                                                                                                                                                                                                                                              overflow-x: auto;
+                                                                                                                                                                                                                                                                                                                                                                  margin-top: 14px;
+                                                                                                                                                                                                                                                                                                                                                                      gap: 5px;
+                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                          .sidebar nav a {
+                                                                                                                                                                                                                                                                                                                                                                              white-space: nowrap;
+                                                                                                                                                                                                                                                                                                                                                                                  padding: 11px;
+                                                                                                                                                                                                                                                                                                                                                                                      font-size: 11px;
+                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                          .sidebar-footer {
+                                                                                                                                                                                                                                                                                                                                                                                              display: none;
+                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                  .principal {
+                                                                                                                                                                                                                                                                                                                                                                                                      margin-left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                          padding: 18px;
+                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                              .topbar h2 {
+                                                                                                                                                                                                                                                                                                                                                                                                                  font-size: 18px;
+                                                                                                                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                      .usuario {
+                                                                                                                                                                                                                                                                                                                                                                                                                          font-size: 10px;
+                                                                                                                                                                                                                                                                                                                                                                                                                              padding: 10px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  .boas-vindas {
+                                                                                                                                                                                                                                                                                                                                                                                                                                      padding: 22px 17px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                          flex-direction: column;
+                                                                                                                                                                                                                                                                                                                                                                                                                                              align-items: flex-start;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  .boas-vindas h2 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      font-size: 23px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          .data-atual {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              text-align: left;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .indicadores {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      gap: 10px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .indicador {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              padding: 16px 12px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .indicador h3 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      font-size: 21px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .grade-modulos {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              gap: 10px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .modulo {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      padding: 17px 12px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @media (max-width: 360px) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .indicadores,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .grade-modulos {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-columns: 1fr;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
